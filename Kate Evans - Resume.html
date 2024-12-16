@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kate Evans - Resume</title>
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f5f2; /* Neutral light beige */
+            color: #333333; /* Dark gray text */
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff; /* White */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* Header Styling */
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border: 3px solid #e0dcd3; /* Light neutral border */
+        }
+        header h1 {
+            margin: 10px 0 5px;
+            color: #5a5a5a; /* Medium gray for headings */
+            font-size: 2rem;
+        }
+        header p {
+            margin: 5px 0;
+            color: #7a7a7a; /* Light gray */
+        }
+
+        /* Contact Info */
+        .contact-info a {
+            color: #5a5a5a; /* Medium gray for links */
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 20px;
+        }
+        h3 {
+            color: #5a5a5a; /* Medium gray headings */
+            border-bottom: 1px solid #e0dcd3; /* Light neutral underline */
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        h4 {
+            margin: 5px 0;
+            color: #444444; /* Darker neutral gray */
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        ul li {
+            margin-bottom: 8px;
+            padding-left: 15px;
+            position: relative;
+        }
+        ul li::before {
+            content: "•";
+            color: #b8b8b8; /* Soft neutral bullet points */
+            position: absolute;
+            left: 0;
+            font-size: 1.2rem;
+        }
+
+        /* Skills and Languages */
+        .skills, .languages {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .skills span, .languages span {
+            background: #f0ece4; /* Light neutral beige background */
+            padding: 8px 12px;
+            margin: 5px;
+            border-radius: 5px;
+            color: #444444;
+            font-size: 0.9rem;
+        }
+
+        /* Education Section */
+        .education p {
+            margin: 5px 0;
+            color: #555555; /* Neutral gray */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <header>
+            <img src="IMG_9529.jpeg" alt="Profile Picture of Kate Evans">
+            <h1>Kate Evans</h1>
+            <p class="contact-info">
+                1256 N 500 W, American Fork, UT 84003<br>
+                Phone: (385) 329-0712<br>
+                Email: <a href="mailto:katemarie2803@gmail.com">katemarie2803@gmail.com</a>
+            </p>
+        </header>
+
+        <!-- Experience Section -->
+        <section>
+            <h3>Experience</h3>
+            <h4>Harmons, Lehi UT — <i>Cashier</i></h4>
+            <ul>
+                <li>Answered product questions with up-to-date knowledge of sales and store promotions.</li>
+                <li>Preserved appearance of store by arranging and replenishing displays and merchandise racks.</li>
+                <li>Accepted cash and credit card payments, issued receipts and provided change.</li>
+                <li>Helped customers find specific products, answered questions and offered product advice.</li>
+                <li>Verified customer age requirement for alcohol or tobacco purchases.</li>
+            </ul>
+
+            <h4>Dede Crowley, American Fork UT — <i>Nanny</i></h4>
+            <ul>
+                <li>Created nurturing, safe environments to promote emotional, social, and intellectual growth.</li>
+                <li>Assisted children with completing homework and special assignments to improve academic performance.</li>
+                <li>Engaged children with games and puzzles to promote mental development and enjoyment.</li>
+                <li>Provided safe transportation to and from activities and events.</li>
+                <li>Minimized TV and mobile device time by engaging children with games and physical books.</li>
+            </ul>
+
+            <h4>MinkyMamas, American Fork UT — <i>Sales Associate</i></h4>
+            <ul>
+                <li>Used technology resources to assist customers in locating and selecting items.</li>
+                <li>Maintained knowledge of current promotions, exchange guidelines, and security practices.</li>
+                <li>Developed trusting relationships with customers by making personal connections.</li>
+                <li>Built and maintained relationships with peers and upper management to drive team success.</li>
+            </ul>
+        </section>
+
+        <!-- Skills Section -->
+        <section>
+            <h3>Skills</h3>
+            <div class="skills">
+                <span>Honest and Dependable</span>
+                <span>Customer Service</span>
+                <span>Customer Transactions</span>
+                <span>Cooperative Attitude</span>
+                <span>Problem Solving</span>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="education">
+            <h3>Education</h3>
+            <p><b>High School Diploma</b>, American Fork High School<br>American Fork, UT | May 2022</p>
+        </section>
+
+        <!-- Languages Section -->
+        <section>
+            <h3>Languages</h3>
+            <div class="languages">
+                <span>English</span>
+            </div>
+        </section>
+    </div>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>

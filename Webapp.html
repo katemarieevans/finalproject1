@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guessing Game</title>
+    <style>
+        /* General Page Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #ffffff; /* White text for contrast */
+            background-color: #ffecb3; /* Light yellow background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #ff6f61; /* Bright coral background */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #ffeb3b; /* Bright yellow color for heading */
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 200px;
+            border-radius: 5px;
+            border: 2px solid #ffeb3b; /* Yellow border */
+            margin-bottom: 20px;
+            background-color: #ffffff; /* White input field */
+            color: #333; /* Dark text */
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #ff4081; /* Fun pink button */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #f50057; /* Darker pink on hover */
+        }
+
+        .message {
+            font-size: 18px;
+            color: #ffffff;
+        }
+
+        .attempts {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #ffffff; /* White color for text */
+        }
+
+        .success {
+            background-color: #76ff03; /* Green success background */
+            color: #000000; /* Dark text for contrast */
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .failure {
+            background-color: #d50000; /* Red failure background */
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div class="container">
+        <h1>Guess the Number Game</h1>
+        <p>Guess a number between 1 and 100:</p>
+
+        <input type="number" id="userGuess" placeholder="Enter your guess" min="1" max="100">
+        <button onclick="checkGuess()">Guess</button>
+
+        <div class="message" id="message"></div>
+        <div class="attempts" id="attempts"></div>
+    </div>
+
+    <script>
+        let randomNumber = Math.floor(Math.random() * 100) + 1; // Random number between 1 and 100
+        let attempts = 0;
+
+        // Function to check the user's guess
+        function checkGuess() {
+            const userGuess = parseInt(document.getElementById("userGuess").value);
+            const message = document.getElementById("message");
+            const attemptsDisplay = document.getElementById("attempts");
+            attempts++;
+
+            if (userGuess === randomNumber) {
+                // User guessed correctly
+                message.textContent = "Congratulations! You guessed the correct number!";
+                message.classList.add("success");
+                message.classList.remove("failure");
+                attemptsDisplay.textContent = `It took you ${attempts} attempts.`;
+
+                // Disable input and button after success
+                document.getElementById("userGuess").disabled = true;
+                document.querySelector("button").disabled = true;
+            } else if (userGuess < randomNumber) {
+                // Guess is too low
+                message.textContent = "Too low! Try again.";
+                message.classList.add("failure");
+                message.classList.remove("success");
+                attemptsDisplay.textContent = `Attempts: ${attempts}`;
+            } else if (userGuess > randomNumber) {
+                // Guess is too high
+                message.textContent = "Too high! Try again.";
+                message.classList.add("failure");
+                message.classList.remove("success");
+                attemptsDisplay.textContent = `Attempts: ${attempts}`;
+            }
+        }
+    </script>
+
+</body>
+</html>
